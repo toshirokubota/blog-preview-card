@@ -1,136 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    @font-face { font-family: Figtree-extra-bold; 
-      src: url('./assets/fonts/static/Figtree-ExtraBold.ttf'); } 
-      @font-face { font-family: Figtree-semi-bold; 
-      src: url('./assets/fonts/static/Figtree-SemiBold.ttf'); } 
-    @font-face { font-family: Figtree; src: url('./assets/fonts/Figtree-VariableFont_wght.ttf'); } 
-    body {
-      background-color: #F4D04E;
-    }
-    .blog-card {
-      background-color: white;
-      border-radius: 10px;
-      border-style: solid;
-      border-width: 1px;
-      border-color: black;
-      width: 384px;
-      @media only screen and (max-width: 400px) {
-        width: 320px;
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @font-face {
+        font-family: Figtree-extra-bold;
+        src: url("./assets/fonts/static/Figtree-ExtraBold.ttf");
       }
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      box-shadow: 10px 10px;
-    }
-    .blog-logo {
-      max-width: fit-content;
-      max-height: fit-content;
-      margin: auto;      
-      padding-top: 24px;
-      @media only screen and (max-width: 400px) {
-        width: 280px;
+      @font-face {
+        font-family: Figtree-semi-bold;
+        src: url("./assets/fonts/static/Figtree-SemiBold.ttf");
       }
-    }
-    .blog-logo + img {
-      max-width: 200;
-      height: 201;
-    }
-    .preview-content {
-      margin-left: 12px;
-      margin-right: 12px;
-      width: 336px;
-      @media only screen and (max-width: 400px) {
-        width: 296px;
+      @font-face {
+        font-family: Figtree;
+        src: url("./assets/fonts/Figtree-VariableFont_wght.ttf");
       }
-    }
-    .blog-category {
-      background-color: #F4D04E;
-      font-family: Figtree;
-      font-weight: 800;
-      font-size: 14px;
-      line-height: 150%;
-      display: inline-block;
-      box-sizing: border-box;
-      padding: 4px;
-    }
-    .blog-title {
-      font-family: Figtree;
-      font-weight: 800;
-      font-size: 24px;
-      line-height: 150%;
-    }
-    /* .card:hover .blog-title { */
-    .blog-title:hover {
-      color: #F4D04E;
-      cursor: pointer;
-    }
-    .publish-date {
-      font-family: Figtree;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 150%;
-    }
-    .description {
-      font-family: Figtree;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 150%;
-    }
-    .blog-author {
-      font-family: Figtree;
-      font-weight: 800;
-      font-size: 14px;
-      line-height: 150%;
-    }
-    .blog-author-image {
-      width: 30px;
-      vertical-align: middle;
-    }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  <main class="blog-card">
+      *,
+      ::before,
+      ::after {
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #f4d04e;
+      }
+      .blog-card {
+        background-color: white;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+        width: 384px;
+        padding-bottom: 24px;
+        @media only screen and (max-width: 400px) {
+          width: 327px;
+        }
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 10px 10px;
+      }
+      .blog-logo {
+        max-width: fit-content;
+        max-height: fit-content;
+        width: 384px;
+        margin: auto;
+        padding-top: 24px;
+        @media only screen and (max-width: 400px) {
+          width: 280px;
+        }
+      }
+      .blog-logo > img {
+        width: 100%;
+        height: auto;
+      }
+      .preview-content {
+        margin-left: 24px;
+        margin-right: 12px;
+        width: 100%;
+      }
+      .blog-category {
+        background-color: #f4d04e;
+        font-family: Figtree;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 150%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 4px;
+      }
+      .blog-title {
+        font-family: Figtree;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 150%;
+      }
+      /* .card:hover .blog-title { */
+      .blog-title:hover {
+        color: #f4d04e;
+        cursor: pointer;
+      }
+      .publish-date {
+        font-family: Figtree;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+      }
+      .description {
+        font-family: Figtree;
+        font-weight: 500;
+        font-size: 16px;
+        @media only screen and (max-width: 400px) {
+          font-size: 14px;
+        }
+        line-height: 150%;
+        width: calc(100% - 12px);
+      }
+      .blog-author {
+        font-family: Figtree;
+        font-weight: 800;
+        font-size: 14px;
+        line-height: 150%;
+      }
+      .blog-author-image {
+        width: 30px;
+        vertical-align: middle;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="blog-card">
       <div class="blog-logo">
-        <img src="./assets/images/illustration-article.svg"/>
+        <img src="./assets/images/illustration-article.svg" />
       </div>
       <div class="preview-content">
-        <p class="blog-category">
-          Learning
-        </p>
-        <p class="publish-date">
-          Published 21 Dec 2023
-        </p>
-        <p class="blog-title">
-          HTML & CSS foundations
-        </p>
+        <p class="blog-category">Learning</p>
+        <p class="publish-date">Published 21 Dec 2023</p>
+        <p class="blog-title">HTML & CSS foundations</p>
         <p class="description">
-          These languages are the backbone of every website, defining structure, content, and presentation.
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
         </p>
         <p class="blog-author">
-          <img src="./assets/images/image-avatar.webp" alt="Greg Hooper" class="blog-author-image"/>
+          <img
+            src="./assets/images/image-avatar.webp"
+            alt="Greg Hooper"
+            class="blog-author-image"
+          />
           Greg Hooper
         </p>
-      </div>  
-  </main>
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </footer>
-</body>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
 </html>
